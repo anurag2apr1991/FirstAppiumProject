@@ -15,7 +15,7 @@ public class AndroidUiAutomator {
                 findElementByAndroidUIAutomator("new UiSelector().text(\"Accessibility\")");
         myElement = (MobileElement) ((FindsByAndroidUIAutomator) driver).
                 findElementsByAndroidUIAutomator("new UiSelector().className(\"Accessibility\")").get(1);
-            String as= "testdata";
+
         //By myElement1 = MobileBy.AndroidUIAutomator("");
 //      System.out.println("Element found is: " + myElement.getText());
 //
