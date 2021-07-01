@@ -32,6 +32,8 @@ public class CreateDriverSession {
                 //caps.setCapability("avdLaunchTimeout", 180000);
 
                 //  Launch at specific activity - if it is directly accessible
+//                caps.setCapability("unlockType","pin");
+//                caps.setCapability("unlockKey","1111");
                 caps.setCapability("appPackage", "io.appium.android.apis");
                 caps.setCapability("appActivity", "io.appium.android.apis.ApiDemos");
                 caps.setCapability(MobileCapabilityType.APP, andAppUrl);
@@ -48,7 +50,9 @@ public class CreateDriverSession {
                 */
                 caps.setCapability("simulatorStartupTimeout", 180000);//iOS Simulator start - helpful in CI/CD timeline
                 //
-                String iOSAppUrl = System.getProperty("user.dir") + File.separator + "src" + File.separator + "main" + File.separator + "resources" + File.separator + "UICatalog-iphonesimulator.app";
+                String iOSAppUrl = System.getProperty("user.dir") + File.separator +
+                        "src" + File.separator + "main" + File.separator + "resources" +
+                        File.separator + "UICatalog-iphonesimulator.app";
                 //caps.setCapability(MobileCapabilityType.APP,iOSAppUrl);
                 caps.setCapability("bundleId", "com.example.apple-samplecode.UICatalog");
                 return new IOSDriver(url, caps);
